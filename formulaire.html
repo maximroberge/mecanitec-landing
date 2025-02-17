@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de Travailleurs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1E1E1E;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            text-align: left;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            background-color: #FF9900;
+            color: #1E1E1E;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #E68A00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulaire de Demande de Travailleurs</h1>
+        <form action="https://formspree.io/f/xeoepknq" method="POST">
+            <label for="company">Nom de l'entreprise :</label>
+            <input type="text" id="company" name="Nom de l'entreprise" required>
+
+            <label for="city">Ville :</label>
+            <input type="text" id="city" name="Ville" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="Email" required>
+
+            <label for="phone">Téléphone :</label>
+            <input type="tel" id="phone" name="Téléphone" required>
+
+            <label for="contact">Nom du contact :</label>
+            <input type="text" id="contact" name="Nom du contact" required>
+
+            <label for="worker-type">Type de travailleur demandé :</label>
+            <select id="worker-type" name="Type de travailleur">
+                <option value="Mécanicien industriel">Mécanicien industriel</option>
+                <option value="Soudeur">Soudeur</option>
+                <option value="Manœuvre">Manœuvre</option>
+            </select>
+
+            <label for="details">Détails de la demande :</label>
+            <textarea id="details" name="Détails de la demande" rows="4" required></textarea>
+
+            <input type="hidden" name="_next" value="merci.html">
+
+            <button type="submit">Envoyer la demande</button>
+        </form>
+    </div>
+</body>
+</html>
